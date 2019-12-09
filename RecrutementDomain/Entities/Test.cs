@@ -10,7 +10,7 @@ namespace RecrutementDomain.Entities
     public enum TypeTest
     { OnLineTest, LanguageTest , PsychotechnicalTest }
 
-    public enum StatusTest { Validated , Failed}
+  //  public enum StatusTest { Validated , Failed}
     public class Test
     {
 
@@ -20,9 +20,12 @@ namespace RecrutementDomain.Entities
 
         public TypeTest TypeTest { get; set; }
 
-        public StatusTest StatusTest { get; set; }
-
+        public String StatusTest { get; set; }
+      /*  public virtual Question question { get; set; }
+        [ForeignKey("question")]
+        public int qstId { get; set; }*/
         public DateTime DateTest { get; set; }
+        public int score { get; set; }
 
         public virtual ICollection<Candidat> candidats { get; set; }
         public virtual ICollection<Question> questions { get; set; }
